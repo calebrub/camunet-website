@@ -51,7 +51,7 @@ form.addEventListener("submit", (event) => {
   const data = new FormData(form);
   const name = data.get("name");
   const service = data.get("service");
-  formStatus.textContent = `Thank you, ${name}. Your ${service} request has been prepared for Camunet Uganda.`;
+  formStatus.textContent = `Thank you, ${name}. Your ${service} request has been prepared for CAMUNET-SMC Uganda Ltd.`;
   form.reset();
 });
 
