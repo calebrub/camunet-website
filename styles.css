@@ -421,7 +421,7 @@ p {
 .sector-grid {
   min-height: 72px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   align-items: center;
   gap: 18px;
   font-family: "Roboto Condensed", sans-serif;
