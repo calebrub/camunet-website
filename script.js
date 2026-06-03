@@ -56,3 +56,32 @@ form.addEventListener("submit", (event) => {
 });
 
 year.textContent = new Date().getFullYear();
+
+// Gallery Filtering
+const filterBtns = document.querySelectorAll(".filter-btn");
+const galleryItems = document.querySelectorAll(".gallery-item");
+
+filterBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    // Remove active class from all buttons
+    filterBtns.forEach(b => b.classList.remove("active"));
+    // Add active class to clicked button
+    btn.classList.add("active");
+
+    const filterValue = btn.getAttribute("data-filter");
+
+    galleryItems.forEach(item => {
+      if (filterValue === "all" || item.getAttribute("data-category") === filterValue) {
+        item.style.display = "block";
+        setTimeout(() => {
+          item.style.opacity = "1";
+        }, 10);
+      } else {
+        item.style.opacity = "0";
+        setTimeout(() => {
+          item.style.display = "none";
+        }, 300);
+      }
+    });
+  });
+});
